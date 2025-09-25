@@ -28,9 +28,10 @@ func _on_body_entered(body: Node2D) -> void:
 			sig.connect(method_callable)
 
 func _on_player_ball_thrown() -> void:
-	picked = false
-
-	if target_node:
-		var player = target_node.get_parent()
-		speed = 1200.0
-		rotation = player.rotation
+	if picked:
+		picked = false
+		
+		if target_node:
+			var player = target_node.get_parent()
+			speed = 1200.0
+			rotation = player.rotation

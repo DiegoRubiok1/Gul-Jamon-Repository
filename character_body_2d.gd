@@ -18,4 +18,3 @@ func _physics_process(delta: float) -> void:
 		
 func throw() -> void:
 	emit_signal("ball_thrown")
-	print("asdkfj")
