@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cty463lyp2i2v"
+path="res://.godot/imported/project_files_AudioMono_Music_bath.ogg-63773b6fdfee91c33bf3cdd785a0d74c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Sounds & Music/project_files_AudioMono_Music_bath.ogg"
+dest_files=["res://.godot/imported/project_files_AudioMono_Music_bath.ogg-63773b6fdfee91c33bf3cdd785a0d74c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

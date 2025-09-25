@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://or3dlesluf5e"
+path="res://.godot/imported/Rock.ogg-3631ea543f5ba959aad9f2dd99af9d2e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Sounds & Music/Rock.ogg"
+dest_files=["res://.godot/imported/Rock.ogg-3631ea543f5ba959aad9f2dd99af9d2e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
