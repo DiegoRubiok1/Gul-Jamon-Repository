@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://dv1pvntlvhc8j"]
+[gd_scene load_steps=7 format=4 uid="uid://bv6md0edlddya"]
 
-[ext_resource type="PackedScene" uid="uid://coyaoexpm0xs" path="res://player.tscn" id="1_yjt3s"]
-[ext_resource type="PackedScene" uid="uid://q4f0e0wey6o7" path="res://ball.tscn" id="2_m3kp5"]
+[ext_resource type="PackedScene" uid="uid://b5f10fsmpnwqq" path="res://scenes/player.tscn" id="1_yjt3s"]
+[ext_resource type="PackedScene" uid="uid://br7vn7dx7nlwc" path="res://scenes/ball.tscn" id="2_m3kp5"]
 [ext_resource type="Texture2D" uid="uid://2xrb0l5yp2x3" path="res://assets/tilesheet_complete.png" id="3_ruqre"]
-[ext_resource type="PackedScene" uid="uid://dp16qtjgym7k1" path="res://player_2.tscn" id="4_ettn1"]
+[ext_resource type="PackedScene" uid="uid://dp16qtjgym7k1" path="res://scenes/player_2.tscn" id="4_ettn1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ettn1"]
 texture = ExtResource("3_ruqre")
