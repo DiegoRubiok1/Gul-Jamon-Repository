@@ -8,3 +8,5 @@
 [node name="Player" parent="." instance=ExtResource("1_yjt3s")]
 
 [node name="Ball" parent="." instance=ExtResource("2_m3kp5")]
+
+[connection signal="ball_thrown" from="Player" to="Ball" method="_on_player_ball_thrown"]
