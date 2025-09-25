@@ -19,4 +19,4 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		picked = true
-		target_node = body
+		target_node = body.get_node("BallHold")

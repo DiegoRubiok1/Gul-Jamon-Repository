@@ -10,4 +10,3 @@ func _physics_process(delta: float) -> void:
 	if direction != Vector2.ZERO:
 		var target_angle = direction.angle()
 		rotation = lerp_angle(rotation, target_angle, 0.1)
-		
