@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp16qtjgym7k1"]
+
+[ext_resource type="Script" uid="uid://djglxwlxtg5hy" path="res://player_2.gd" id="1_wkcja"]
+[ext_resource type="Texture2D" uid="uid://5w432thc6f38" path="res://assets/Man Blue/manBlue_stand.png" id="2_8xjnt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ufh5k"]
+radius = 14.0
+height = 49.5
+
+[node name="Player2" type="CharacterBody2D"]
+script = ExtResource("1_wkcja")
+
+[node name="ManBlueStand" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_8xjnt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ufh5k")
+
+[node name="BallHold" type="Marker2D" parent="."]
+position = Vector2(27, 0)

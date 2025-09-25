@@ -26,8 +26,28 @@ func _on_body_entered(body: Node2D) -> void:
 		var method_callable = Callable(self, "_on_player_ball_thrown")
 		if not sig.is_connected(method_callable):
 			sig.connect(method_callable)
+	
+	if body.name == "Player2":
+		picked = true
+		target_node = body.get_node("BallHold")
+		
+		# Fix para que se pueda volver a tirar la bola, no sé como funciona, no tocar
+		var sig = body.ball_thrown
+		var method_callable = Callable(self, "_on_player_2_ball_thrown")
+		if not sig.is_connected(method_callable):
+			sig.connect(method_callable)
 
 func _on_player_ball_thrown() -> void:
+	if picked:
+		picked = false
+		
+		if target_node:
+			var player = target_node.get_parent()
+			speed = 1200.0
+			rotation = player.rotation
+
+
+func _on_player_2_ball_thrown() -> void:
 	if picked:
 		picked = false
 		
