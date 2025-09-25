@@ -569,6 +569,7 @@ sources/12 = SubResource("TileSetAtlasSource_ettn1")
 [node name="SuperMegaHotPotato" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_yjt3s")]
+unique_name_in_owner = true
 z_index = 2
 position = Vector2(598, 482)
 
@@ -583,6 +584,7 @@ tile_set = SubResource("TileSet_3pdyk")
 position = Vector2(492, 463)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(643, 408)
 position_smoothing_enabled = true
 script = ExtResource("5_ou6d3")
 

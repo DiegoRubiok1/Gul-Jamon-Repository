@@ -36,6 +36,9 @@ func _on_body_entered(body: Node2D) -> void:
 		var method_callable = Callable(self, "_on_player_2_ball_thrown")
 		if not sig.is_connected(method_callable):
 			sig.connect(method_callable)
+	
+	if body.name == "TileMapLayer":
+		rotation = rotation + PI
 
 func _on_player_ball_thrown() -> void:
 	if picked:
