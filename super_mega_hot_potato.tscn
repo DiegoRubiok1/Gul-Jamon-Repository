@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv1pvntlvhc8j"]
+
+[ext_resource type="PackedScene" uid="uid://coyaoexpm0xs" path="res://player.tscn" id="1_yjt3s"]
+[ext_resource type="PackedScene" uid="uid://q4f0e0wey6o7" path="res://ball.tscn" id="2_m3kp5"]
+
+[node name="SuperMegaHotPotato" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_yjt3s")]
+
+[node name="Ball" parent="." instance=ExtResource("2_m3kp5")]
