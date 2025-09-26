@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+var temperature = 0.0
+
+const TEMPERATURE_AUGMENT = 5.0
+
 signal ball_thrown
 
 func _physics_process(delta: float) -> void:
@@ -15,6 +19,11 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("throw_p1"):
 		throw()
+		
+	if Global.ball_player == "Player":
+		temperature += TEMPERATURE_AUGMENT * delta
+	else:
+		temperature -= TEMPERATURE_AUGMENT * 0.25 * delta
 		
 func throw() -> void:
 	emit_signal("ball_thrown")
