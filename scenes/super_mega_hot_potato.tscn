@@ -7730,11 +7730,13 @@ color = Color(0.25490198, 0.25490198, 0.25490198, 0.78431374)
 
 [node name="Label" type="Label" parent="Player1Win/ColorRect"]
 layout_mode = 0
-offset_left = 484.0
-offset_top = 322.0
-offset_right = 664.0
-offset_bottom = 345.0
-text = "El jugador 1 ha ganado."
+offset_left = 285.0
+offset_top = 269.0
+offset_right = 877.0
+offset_bottom = 410.0
+theme_override_font_sizes/font_size = 50
+text = "El jugador 1 ha ganado.
+Presiona R para reiniciar"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -7752,11 +7754,13 @@ color = Color(0.25490198, 0.25490198, 0.25490198, 0.78431374)
 
 [node name="Label" type="Label" parent="Player2Win/ColorRect"]
 layout_mode = 0
-offset_left = 484.0
-offset_top = 322.0
-offset_right = 664.0
-offset_bottom = 345.0
-text = "El jugador 2 ha ganado."
+offset_left = 271.0
+offset_top = 268.0
+offset_right = 863.0
+offset_bottom = 409.0
+theme_override_font_sizes/font_size = 50
+text = "El jugador 2 ha ganado.
+Presiona R para reiniciar"
 horizontal_alignment = 1
 vertical_alignment = 1
 

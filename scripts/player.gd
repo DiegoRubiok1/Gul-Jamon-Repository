@@ -8,6 +8,10 @@ const TEMPERATURE_AUGMENT = 5.0
 
 signal ball_thrown
 
+func _ready():
+	process_mode = PROCESS_MODE_PAUSABLE
+	
+
 func _physics_process(delta: float) -> void:
 	const SPEED = 400.0
 	

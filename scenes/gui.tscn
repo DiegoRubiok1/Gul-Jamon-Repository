@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://quksue7o71j4"]
+[gd_scene load_steps=3 format=3 uid="uid://5vak2yrw85id"]
 
 [ext_resource type="Texture2D" uid="uid://dfw2vbhwy60q8" path="res://assets/UI/Buttons01.png" id="1_efmwq"]
-[ext_resource type="Script" uid="uid://colw8vhme7kkc" path="res://scripts/gui.gd" id="1_mfius"]
+[ext_resource type="Script" path="res://scripts/gui.gd" id="1_mfius"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
