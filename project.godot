@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Gul jamon"
-run/main_scene="uid://quksue7o71j4"
+run/main_scene="uid://5vak2yrw85id"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

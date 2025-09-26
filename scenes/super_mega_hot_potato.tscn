@@ -7625,8 +7625,8 @@ script = ExtResource("1_rcuy2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -5
-position = Vector2(1748, 916)
-scale = Vector2(54.84375, 39.622223)
+position = Vector2(1755.5, 893.5)
+scale = Vector2(54.609375, 39.488888)
 texture = ExtResource("1_613i4")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -7678,16 +7678,17 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAoAAAACAAAAAAACAAoAAAABAAAAAAACAAo
 tile_set = SubResource("TileSet_0nbrw")
 
 [node name="Ball" parent="." instance=ExtResource("2_m3kp5")]
-position = Vector2(326, 518)
+position = Vector2(1828, 1262)
 
 [node name="Player" parent="." instance=ExtResource("1_yjt3s")]
 unique_name_in_owner = true
 z_index = 2
-position = Vector2(312, 513)
+position = Vector2(1772, 1258)
 
 [node name="Player2" parent="." instance=ExtResource("4_ettn1")]
 unique_name_in_owner = true
-position = Vector2(1380, 711)
+position = Vector2(1889.0001, 1258)
+rotation = -3.1122575
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(643, 408)
