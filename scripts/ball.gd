@@ -1,5 +1,6 @@
 extends Area2D
 
+var current_player = null
 
 var picked = false
 
@@ -21,35 +22,34 @@ func _physics_process(delta: float) -> void:
 			position += direction * speed * delta
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" or body.name == "Player2":
+		if current_player:
+			var prev_signal = current_player.ball_thrown
+			prev_signal.disconnect(Callable(self, "_on_player_ball_thrown"))
+			prev_signal.disconnect(Callable(self, "_on_player_2_ball_thrown"))
 		
-		Global.ball_player = "Player" # Cambiamos el jugador que tiene la bola
+		current_player = body
 		picked = true
 		target_node = body.get_node("BallHold")
 		
-		# Fix para que se pueda volver a tirar la bola, no sé como funciona, no tocar
-		var sig = body.ball_thrown
-		var method_callable = Callable(self, "_on_player_ball_thrown")
-		if not sig.is_connected(method_callable):
-			sig.connect(method_callable)
+		if body.name == "Player":
+			Global.ball_player = "Player"
+			var sig = body.ball_thrown
+			var method_callable = Callable(self, "_on_player_ball_thrown")
+			if not sig.is_connected(method_callable):
+				sig.connect(method_callable)
 		
-	
-	elif body.name == "Player2":
-		
-		Global.ball_player = "Player2"
-		picked = true
-		target_node = body.get_node("BallHold")
-		
-		# Fix para que se pueda volver a tirar la bola, no sé como funciona, no tocar
-		var sig = body.ball_thrown
-		var method_callable = Callable(self, "_on_player_2_ball_thrown")
-		if not sig.is_connected(method_callable):
-			sig.connect(method_callable)
-	
+		elif body.name == "Player2":
+			Global.ball_player = "Player2"
+			var sig = body.ball_thrown
+			var method_callable = Callable(self, "_on_player_2_ball_thrown")
+			if not sig.is_connected(method_callable):
+				sig.connect(method_callable)
 	else:
 		rotation = rotation - PI
 
 func _on_player_ball_thrown() -> void:
+	print("player 1 ball thrown")
 	if picked:
 		picked = false
 		
@@ -59,6 +59,7 @@ func _on_player_ball_thrown() -> void:
 			rotation = player.rotation
 
 func _on_player_2_ball_thrown() -> void:
+	print("player 2 ball thrown")
 	if picked:
 		picked = false
 		
