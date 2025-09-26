@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=4 uid="uid://dv1pvntlvhc8j"]
+[gd_scene load_steps=17 format=4 uid="uid://dv1pvntlvhc8j"]
 
 [ext_resource type="Texture2D" uid="uid://cdefuuqeb5gly" path="res://photos/fondo.jpg" id="1_613i4"]
+[ext_resource type="Script" uid="uid://cucpmy5xl46sf" path="res://scenes/super_mega_hot_potato.gd" id="1_rcuy2"]
 [ext_resource type="PackedScene" uid="uid://b5f10fsmpnwqq" path="res://scenes/player.tscn" id="1_yjt3s"]
 [ext_resource type="PackedScene" uid="uid://br7vn7dx7nlwc" path="res://scenes/ball.tscn" id="2_m3kp5"]
 [ext_resource type="Texture2D" uid="uid://bn8nhohcuf6jn" path="res://photos/Imagen de WhatsApp 2025-09-25 a las 23.40.29_c4f54724.jpg" id="2_td764"]
@@ -7619,6 +7620,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hjpfu")
 
 [node name="SuperMegaHotPotato" type="Node2D"]
+script = ExtResource("1_rcuy2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -5
@@ -7713,3 +7715,50 @@ fill_mode = 3
 texture_over = ExtResource("7_33p80")
 texture_progress = ExtResource("12_ldbgw")
 script = ExtResource("13_ldbgw")
+
+[node name="Player1Win" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Player1Win"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25490198, 0.25490198, 0.25490198, 0.78431374)
+
+[node name="Label" type="Label" parent="Player1Win/ColorRect"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 322.0
+offset_right = 664.0
+offset_bottom = 345.0
+text = "El jugador 1 ha ganado."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player2Win" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Player2Win"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25490198, 0.25490198, 0.25490198, 0.78431374)
+
+[node name="Label" type="Label" parent="Player2Win/ColorRect"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 322.0
+offset_right = 664.0
+offset_bottom = 345.0
+text = "El jugador 2 ha ganado."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="temp_max_p1" from="Player" to="." method="_on_player_temp_max_p_1"]
+[connection signal="temp_max_p2" from="Player2" to="." method="_on_player_2_temp_max_p_2"]

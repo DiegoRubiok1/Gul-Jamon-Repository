@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://quksue7o71j4"]
+
+[ext_resource type="Texture2D" uid="uid://dfw2vbhwy60q8" path="res://assets/UI/Buttons01.png" id="1_efmwq"]
+[ext_resource type="Script" uid="uid://colw8vhme7kkc" path="res://scripts/gui.gd" id="1_mfius"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mfius")
+
+[node name="Controles" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 328.0
+offset_right = 747.0
+offset_bottom = 407.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_font_sizes/font_size = 38
+text = "Controles"
+icon = ExtResource("1_efmwq")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 200.0
+offset_right = 752.0
+offset_bottom = 328.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_font_sizes/font_size = 47
+text = "Jugar"
+icon = ExtResource("1_efmwq")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Créditos" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 416.0
+offset_right = 747.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_font_sizes/font_size = 38
+text = "Créditos"
+icon = ExtResource("1_efmwq")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 96.0
+offset_right = 897.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 50
+text = "SUPER MEGA HOT POTATO"
+
+[connection signal="pressed" from="Controles" to="." method="_on_controles_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Créditos" to="." method="_on_créditos_pressed"]

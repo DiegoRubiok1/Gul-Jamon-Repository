@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal temp_max_p1
+
 var temperature = 0.0
 
 const TEMPERATURE_AUGMENT = 5.0
@@ -24,6 +26,9 @@ func _physics_process(delta: float) -> void:
 		temperature += TEMPERATURE_AUGMENT * delta
 	else:
 		temperature -= TEMPERATURE_AUGMENT * 0.25 * delta
-		
+	
+	if temperature > 100.0:
+		emit_signal("temp_max_p1")
+	
 func throw() -> void:
 	emit_signal("ball_thrown")

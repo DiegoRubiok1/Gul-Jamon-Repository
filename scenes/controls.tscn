@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfeyq3vblm6e4"]
+
+[ext_resource type="Texture2D" uid="uid://dfw2vbhwy60q8" path="res://assets/UI/Buttons01.png" id="1_fd5ym"]
+[ext_resource type="Script" uid="uid://5pkdf8xp5agk" path="res://scripts/controls.gd" id="1_ihl6s"]
+[ext_resource type="Texture2D" uid="uid://de3eaqaovphec" path="res://assets/Keyboard layout/arrrows.png" id="2_4cpvv"]
+[ext_resource type="Texture2D" uid="uid://bjxquecupc383" path="res://assets/Keyboard layout/WASD_Movement.png" id="3_3rflg"]
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ihl6s")
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 112.0
+offset_right = 446.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 33
+text = "Jugador 1"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 480.0
+offset_right = 432.0
+offset_bottom = 528.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 33
+text = "L - Shift"
+
+[node name="volver" type="Button" parent="."]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 331.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_font_sizes/font_size = 38
+text = "Volver
+"
+icon = ExtResource("1_fd5ym")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Arrrows" type="Sprite2D" parent="."]
+position = Vector2(368, 328.00003)
+scale = Vector2(0.32564119, 0.31940058)
+texture = ExtResource("2_4cpvv")
+
+[node name="WasdMovement" type="Sprite2D" parent="."]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+position = Vector2(856, 328)
+scale = Vector2(0.795082, 0.795082)
+texture = ExtResource("3_3rflg")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 120.0
+offset_right = 192.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 33
+text = "Move:"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 480.0
+offset_right = 208.0
+offset_bottom = 528.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 33
+text = "Shoot:"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 104.0
+offset_right = 934.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "Jugador 2"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 480.0
+offset_right = 936.0
+offset_bottom = 528.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 33
+text = "R - Shift"
+
+[connection signal="pressed" from="volver" to="." method="_on_volver_pressed"]
