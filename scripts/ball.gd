@@ -1,5 +1,6 @@
 extends Area2D
 
+
 var picked = false
 
 var speed = 1200.0
@@ -7,6 +8,8 @@ const DECELERATION = 900.0
 
 var target_node = null
 
+func _process(delta: float) -> void:
+	print("Jugador con patata:" + str(Global.ball_player))
 func _physics_process(delta: float) -> void:
 	if picked:
 		position = target_node.global_position
@@ -18,6 +21,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		
+		Global.ball_player = "Player" # Cambiamos el jugador que tiene la bola
 		picked = true
 		target_node = body.get_node("BallHold")
 		
@@ -26,8 +31,11 @@ func _on_body_entered(body: Node2D) -> void:
 		var method_callable = Callable(self, "_on_player_ball_thrown")
 		if not sig.is_connected(method_callable):
 			sig.connect(method_callable)
+		
 	
 	if body.name == "Player2":
+		
+		Global.ball_player = "Player2"
 		picked = true
 		target_node = body.get_node("BallHold")
 		
@@ -38,7 +46,7 @@ func _on_body_entered(body: Node2D) -> void:
 			sig.connect(method_callable)
 	
 	if body.name == "TileMapLayer":
-		rotation = rotation + PI
+		rotation = - rotation 
 
 func _on_player_ball_thrown() -> void:
 	if picked:
@@ -48,7 +56,6 @@ func _on_player_ball_thrown() -> void:
 			var player = target_node.get_parent()
 			speed = 1200.0
 			rotation = player.rotation
-
 
 func _on_player_2_ball_thrown() -> void:
 	if picked:
