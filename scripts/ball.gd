@@ -9,7 +9,8 @@ const DECELERATION = 900.0
 var target_node = null
 
 func _process(delta: float) -> void:
-	print("Jugador con patata:" + str(Global.ball_player))
+	pass
+	
 func _physics_process(delta: float) -> void:
 	if picked:
 		position = target_node.global_position
@@ -33,7 +34,7 @@ func _on_body_entered(body: Node2D) -> void:
 			sig.connect(method_callable)
 		
 	
-	if body.name == "Player2":
+	elif body.name == "Player2":
 		
 		Global.ball_player = "Player2"
 		picked = true
@@ -45,8 +46,8 @@ func _on_body_entered(body: Node2D) -> void:
 		if not sig.is_connected(method_callable):
 			sig.connect(method_callable)
 	
-	if body.name == "TileMapLayer":
-		rotation = - rotation 
+	else:
+		rotation = rotation - PI
 
 func _on_player_ball_thrown() -> void:
 	if picked:
