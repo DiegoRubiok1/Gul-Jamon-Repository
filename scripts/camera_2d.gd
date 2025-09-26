@@ -3,7 +3,7 @@ extends Camera2D
 @onready var p1 = get_parent().get_node("Player")
 @onready var p2 = get_parent().get_node("Player2")
 
-var zoommin = 0.1
+var zoommin = 0.5
 var zoommax = 1
 
 func _physics_process(delta: float) -> void:

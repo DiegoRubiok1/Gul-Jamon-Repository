@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddneaf2m5jswi" path="res://assets/Ball/ball_red_small.png" id="2_ktgx5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hgol0"]
-radius = 18.027756
+radius = 24.0
 
 [node name="Ball" type="Area2D"]
 collision_mask = 3
