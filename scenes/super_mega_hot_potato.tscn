@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dv1pvntlvhc8j"]
+[gd_scene load_steps=18 format=4 uid="uid://dv1pvntlvhc8j"]
 
 [ext_resource type="Texture2D" uid="uid://cdefuuqeb5gly" path="res://photos/fondo.jpg" id="1_613i4"]
 [ext_resource type="Script" uid="uid://cucpmy5xl46sf" path="res://scenes/super_mega_hot_potato.gd" id="1_rcuy2"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://kcdh6poer5rq" path="res://assets/Health Bars/status2.png" id="12_ldbgw"]
 [ext_resource type="Script" uid="uid://bcp8dncygqtfy" path="res://scripts/Player1Bar.gd" id="12_td764"]
 [ext_resource type="Script" uid="uid://cx4oufhoi2lqg" path="res://scripts/Player2Bar.gd" id="13_ldbgw"]
+[ext_resource type="AudioStream" uid="uid://b6i010lnexl0x" path="res://assets/Sounds & Music/hell.ogg" id="15_h7bne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjpfu"]
 texture = ExtResource("3_ruqre")
@@ -7763,6 +7764,10 @@ text = "El jugador 2 ha ganado.
 Presiona R para reiniciar"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_h7bne")
+autoplay = true
 
 [connection signal="temp_max_p1" from="Player" to="." method="_on_player_temp_max_p_1"]
 [connection signal="temp_max_p2" from="Player2" to="." method="_on_player_2_temp_max_p_2"]

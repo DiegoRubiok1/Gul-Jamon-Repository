@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfeyq3vblm6e4"]
+[gd_scene load_steps=6 format=3 uid="uid://cfeyq3vblm6e4"]
 
 [ext_resource type="Texture2D" uid="uid://dfw2vbhwy60q8" path="res://assets/UI/Buttons01.png" id="1_fd5ym"]
 [ext_resource type="Script" uid="uid://5pkdf8xp5agk" path="res://scripts/controls.gd" id="1_ihl6s"]
 [ext_resource type="Texture2D" uid="uid://de3eaqaovphec" path="res://assets/Keyboard layout/arrrows.png" id="2_4cpvv"]
 [ext_resource type="Texture2D" uid="uid://bjxquecupc383" path="res://assets/Keyboard layout/WASD_Movement.png" id="3_3rflg"]
+[ext_resource type="Texture2D" uid="uid://b1bxhyf7puv7h" path="res://photos/Game.png" id="5_jlst0"]
 
 [node name="Controls" type="Control"]
 layout_mode = 3
@@ -49,13 +50,13 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Arrrows" type="Sprite2D" parent="."]
-position = Vector2(368, 328.00003)
+position = Vector2(855, 312)
 scale = Vector2(0.32564119, 0.31940058)
 texture = ExtResource("2_4cpvv")
 
 [node name="WasdMovement" type="Sprite2D" parent="."]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-position = Vector2(856, 328)
+position = Vector2(360, 309)
 scale = Vector2(0.795082, 0.795082)
 texture = ExtResource("3_3rflg")
 
@@ -98,5 +99,11 @@ offset_bottom = 528.0
 theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 theme_override_font_sizes/font_size = 33
 text = "R - Shift"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(586, 315)
+scale = Vector2(1.3234704, 1.3086207)
+texture = ExtResource("5_jlst0")
 
 [connection signal="pressed" from="volver" to="." method="_on_volver_pressed"]

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://5vak2yrw85id"]
+[gd_scene load_steps=5 format=3 uid="uid://5vak2yrw85id"]
 
 [ext_resource type="Texture2D" uid="uid://dfw2vbhwy60q8" path="res://assets/UI/Buttons01.png" id="1_efmwq"]
-[ext_resource type="Script" path="res://scripts/gui.gd" id="1_mfius"]
+[ext_resource type="Script" uid="uid://colw8vhme7kkc" path="res://scripts/gui.gd" id="1_mfius"]
+[ext_resource type="Texture2D" uid="uid://b1bxhyf7puv7h" path="res://photos/Game.png" id="3_ynd5l"]
+[ext_resource type="AudioStream" uid="uid://cty463lyp2i2v" path="res://assets/Sounds & Music/project_files_AudioMono_Music_bath.ogg" id="4_b8iy7"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
@@ -62,6 +64,16 @@ offset_right = 897.0
 offset_bottom = 165.0
 theme_override_font_sizes/font_size = 50
 text = "SUPER MEGA HOT POTATO"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(575.99994, 335)
+scale = Vector2(1.1810346, 1.1810344)
+texture = ExtResource("3_ynd5l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_b8iy7")
+autoplay = true
 
 [connection signal="pressed" from="Controles" to="." method="_on_controles_pressed"]
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]

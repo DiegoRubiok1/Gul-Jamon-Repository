@@ -12,20 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2ckv8")
 
-[node name="Label6" type="Label" parent="."]
-layout_mode = 0
-offset_left = 416.0
-offset_top = 264.0
-offset_right = 812.0
-offset_bottom = 457.0
-theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
-theme_override_font_sizes/font_size = 33
-text = "Pablo Rumynin Luchok
-Lucas Sotomayor Barrios
-Sergio Sánchez-Pascuala Martín
-Diego Rubio Canales"
-
 [node name="volver" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
 offset_top = 16.0
 offset_right = 331.0
@@ -38,6 +26,19 @@ icon = ExtResource("2_0ctdu")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 264.0
+offset_right = 812.0
+offset_bottom = 457.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 33
+text = "Pablo Rumynin Luchok
+Lucas Sotomayor Barrios
+Sergio Sánchez-Pascuala Martín
+Diego Rubio Canales"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
